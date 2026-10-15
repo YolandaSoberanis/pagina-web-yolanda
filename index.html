@@ -64,14 +64,20 @@ nav ul{display:flex;gap:26px;list-style:none;padding:0}
 nav a{text-decoration:none;font-size:.92rem;color:var(--mute)}nav a:hover{color:var(--navy)}
 .bar .btn{min-height:44px;padding:10px 20px;font-size:.8rem}
 .menu-btn{display:none;background:none;border:0;font-size:1.7rem;color:var(--navy);min-width:44px;min-height:44px}
-@media(max-width:960px){.menu-btn{display:block}.bar>.btn{display:none}
+@media(max-width:960px){.menu-btn{display:block}.bar>.btn,.bar>.agenda-group{display:none}
 nav{position:absolute;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);display:none;padding:12px 22px 24px}
 nav.open{display:block}nav ul{flex-direction:column;gap:0}nav a{display:block;padding:14px 0;font-size:1.05rem;border-bottom:1px solid var(--line)}}
 /* hero */
 .hero{padding:132px 0 84px;background:linear-gradient(180deg,var(--bg),#fff)}
 .hero{text-align:center}.hero .wrap{max-width:860px}.hero h1{margin:0 auto;font-size:clamp(1.5rem,6vw,2.5rem)}.hero .cta-row,.hero .pills{justify-content:center}
 .hero p.sub{font-size:1.15rem;color:var(--mute);margin:22px auto 32px;max-width:48ch}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.mail-ico{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--navy);color:var(--navy);flex:none;transition:background .2s,color .2s}
+.mail-ico:hover{background:var(--navy);color:#fff}
+.mail-ico svg{width:20px;height:20px;fill:currentColor}
+.mail-ico.on-dark{border-color:#ffffff88;color:#fff}
+.mail-ico.on-dark:hover{background:#fff;color:var(--navy)}
+.agenda-group{display:flex;align-items:center;gap:10px}
 .pills{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;list-style:none;padding:0;color:var(--navy);font-weight:700;font-size:1.35rem}
 .pills li+li::before{content:"";display:inline-block;width:1px;height:14px;background:var(--gold);margin-right:22px;vertical-align:-2px}
 .photo{aspect-ratio:4/5;max-width:380px;width:100%;justify-self:center;border-radius:200px 200px var(--r) var(--r);background:linear-gradient(160deg,var(--navy2),var(--navy));display:grid;place-items:center;text-align:center;color:#ffffffcc;padding:30px;position:relative;box-shadow:0 30px 60px -30px #0E1F3D88}
@@ -199,7 +205,10 @@ dialog button{margin-top:10px}
     <li><a href="#educacion">Educación</a></li><li><a href="#ahorro">Ahorro</a></li><li><a href="#contacto">Contacto</a></li>
    </ul>
   </nav>
-  <a class="btn b-gold" href="#contacto">AGENDA TU CITA</a>
+  <div class="agenda-group">
+   <a class="btn b-gold" href="https://calendly.com/soberanispatrimonial" target="_blank" rel="noopener">AGENDA TU CITA</a>
+   <a class="mail-ico" href="mailto:soberanispatrimonial@gmail.com" aria-label="Escribir por correo a Yolanda" title="Escribir por correo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2.3V6h16v.3l-8 6.99L4 6.3zM4 8.3 11.4 14.8a1 1 0 0 0 1.2 0L20 8.3V18H4V8.3z"/></svg></a>
+  </div>
   <button class="menu-btn" id="mb" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">☰</button>
  </div>
 </header>
@@ -342,7 +351,7 @@ dialog button{margin-top:10px}
  <div class="wrap">
   <h2>Tu futuro financiero<br>comienza con una decisión.</h2>
   <p>Agenda una asesoría y descubre qué estrategia puede ayudarte a proteger, ahorrar y construir patrimonio.</p>
-  <div class="cta-row"><a class="btn b-gold" href="#contacto">AGENDA TU CITA</a><a class="btn b-light" data-wa target="_blank" rel="noopener">WHATSAPP</a></div>
+  <div class="cta-row"><a class="btn b-gold" href="https://calendly.com/soberanispatrimonial" target="_blank" rel="noopener">AGENDA TU CITA</a><a class="mail-ico on-dark" href="mailto:soberanispatrimonial@gmail.com" aria-label="Escribir por correo a Yolanda" title="Escribir por correo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2.3V6h16v.3l-8 6.99L4 6.3zM4 8.3 11.4 14.8a1 1 0 0 0 1.2 0L20 8.3V18H4V8.3z"/></svg></a><a class="btn b-light" data-wa target="_blank" rel="noopener">WHATSAPP</a></div>
  </div>
 </section>
 
@@ -367,8 +376,8 @@ dialog button{margin-top:10px}
     <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" style="fill:var(--gold-d)"><path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4Z"/></svg>
     <h3 style="font-size:1rem">Orientación y Asesoría vía Zoom</h3>
     <p>Elige un horario y recibe el enlace de la videollamada.</p>
-    <a class="btn b-gold" data-wa data-msg="Hola Yolanda, me gustaría agendar una orientación por Zoom." target="_blank" rel="noopener">AGENDAR POR ZOOM</a>
-    <p class="todo">Próximamente: agenda en línea con enlace automático de Zoom. Por ahora, este botón te conecta conmigo por WhatsApp.</p>
+    <a class="btn b-gold" href="https://calendly.com/soberanispatrimonial" target="_blank" rel="noopener">AGENDAR EN CALENDLY</a>
+    <p class="todo">Estamos por terminar de configurar Zoom. Agenda tu horario aquí y te comparto el enlace de la videollamada antes de la cita.</p>
    </article>
   </div>
   <form class="form" id="form" novalidate>
@@ -378,7 +387,7 @@ dialog button{margin-top:10px}
    <div class="field"><label for="f-i">¿Qué te interesa?</label><select id="f-i"><option>Seguro</option><option>PPR</option><option>Ahorro</option><option>Educación</option><option>Protección patrimonial</option><option>Vida Mujer</option><option>Otro</option></select></div>
    <div class="field"><label for="f-o">¿Qué objetivo quieres alcanzar?</label><textarea id="f-o" rows="3"></textarea></div>
    <button class="btn b-gold" type="submit" style="width:100%">QUIERO RECIBIR ASESORÍA</button>
-   <p id="ok" role="status">Gracias por tu información. Yolanda se pondrá en contacto contigo.</p>
+   <p id="ok" role="status">Gracias por tu información. Yolanda se pondrá en contacto contigo. Si prefieres adelantar tu cita, agenda directamente en <a href="https://calendly.com/soberanispatrimonial" target="_blank" rel="noopener">Calendly</a> o escríbeme a <a href="mailto:soberanispatrimonial@gmail.com">soberanispatrimonial@gmail.com</a>.</p>
   </form>
  </div>
 </section>
