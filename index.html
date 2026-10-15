@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com; connect-src https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; object-src 'none'; base-uri 'self'; form-action 'none'">
-<title>Asesora patrimonial en Querétaro | Seguros, PPR y ahorro | Yolanda Soberanis</title>
+<title>Asesora Patrimonial | Seguros, PPR y ahorro | Yolanda Soberanis</title>
 <meta name="description" content="Yolanda Soberanis, asesora patrimonial en Querétaro. Asesoría personalizada en seguros, PPR, ahorro para el retiro y educación universitaria. Agenda por WhatsApp.">
 <link rel="canonical" href="https://soberanispatrimonial.com/">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -86,6 +86,7 @@ nav.open{display:block}nav ul{flex-direction:column;gap:0}nav a{display:block;pa
 .card:hover{box-shadow:0 18px 40px -22px #0E1F3D66;transform:translateY(-3px)}
 .card p{color:var(--mute);flex:1;font-size:.98rem}
 .card .link{align-self:flex-start;font-size:.88rem;letter-spacing:.05em}
+.card .link.tog{background:none;border:0;border-bottom:1.5px solid var(--gold);cursor:pointer;font:inherit;padding:0;text-align:left}
 .services .card{background:var(--bg);border-color:transparent;border-top-color:var(--gold)}
 .services .wide{grid-column:1/-1}
 /* ppr */
@@ -158,7 +159,7 @@ dialog button{margin-top:10px}
 .pn h4{font:400 1.1rem Roboto,Arial,sans-serif;color:var(--navy);margin:14px 0 2px}
 .pn p{flex:none;font-size:.93rem;color:var(--mute)}.pn .disc{font-size:.78rem;margin:14px 0}
 .pn .btn{min-height:46px;padding:10px 22px;font-size:.85rem;width:100%}
-.services .grid{align-items:start}
+.services .grid{align-items:stretch}
 #proteccion h2{text-align:center}
 @media(min-width:760px){#proteccion h2{white-space:nowrap}}
 #proteccion .lead{text-align:center;margin-left:auto;margin-right:auto}
@@ -192,7 +193,7 @@ dialog button{margin-top:10px}
     <li><a href="#educacion">Educación</a></li><li><a href="#ahorro">Ahorro</a></li><li><a href="#contacto">Contacto</a></li>
    </ul>
   </nav>
-  <a class="btn b-gold" data-wa target="_blank" rel="noopener">AGENDA TU ASESORÍA</a>
+  <a class="btn b-gold" href="#contacto">AGENDA TU CITA</a>
   <button class="menu-btn" id="mb" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">☰</button>
  </div>
 </header>
@@ -214,10 +215,10 @@ dialog button{margin-top:10px}
   <p class="lead" style="white-space:nowrap;max-width:none">Cada etapa de la vida tiene necesidades diferentes.</p>
   <p class="lead nowrap-lg" style="margin-top:8px">La clave está en anticiparte y construir hoy las soluciones que necesitarás mañana.</p>
   <div class="grid g4">
-   <article class="card"><h3>Tu familia</h3><p>Protege económicamente a quienes más quieres ante situaciones inesperadas.</p><a class="link" data-wa data-msg="Hola Yolanda, quiero proteger a mi familia. ¿Me puedes orientar?" target="_blank" rel="noopener">CONOCER MÁS</a></article>
-   <article class="card"><h3>Tu salud</h3><p>Conoce alternativas para contar con respaldo económico ante gastos médicos.</p><a class="link" data-wa data-msg="Hola Yolanda, quiero conocer alternativas de respaldo para gastos médicos." target="_blank" rel="noopener">CONOCER MÁS</a></article>
-   <article class="card"><h3>Tu retiro</h3><p>Construye una estrategia para mantener tu calidad de vida cuando llegue el momento de retirarte.</p><a class="link" data-wa data-msg="Hola Yolanda, quiero planear mi retiro." target="_blank" rel="noopener">CONOCER MÁS</a></article>
-   <article class="card"><h3>El futuro de tus hijos</h3><p>Planea desde hoy el costo de su educación universitaria.</p><a class="link" data-wa data-msg="Hola Yolanda, quiero planear la universidad de mis hijos." target="_blank" rel="noopener">CONOCER MÁS</a></article>
+   <article class="card"><h3>Tu familia</h3><p>Protege económicamente a quienes más quieres ante situaciones inesperadas.</p><button type="button" class="link tog" data-k="pfam" data-msg="Hola Yolanda, quiero proteger a mi familia. ¿Me puedes orientar?" aria-expanded="false">CONOCER MÁS</button><div class="pn" hidden></div></article>
+   <article class="card"><h3>Tu salud</h3><p>Conoce alternativas para contar con respaldo económico ante gastos médicos.</p><button type="button" class="link tog" data-k="psal" data-msg="Hola Yolanda, quiero conocer alternativas de respaldo para gastos médicos." aria-expanded="false">CONOCER MÁS</button><div class="pn" hidden></div></article>
+   <article class="card"><h3>Tu retiro</h3><p>Construye una estrategia para mantener tu calidad de vida cuando llegue el momento de retirarte.</p><button type="button" class="link tog" data-k="pret" data-msg="Hola Yolanda, quiero planear mi retiro." aria-expanded="false">CONOCER MÁS</button><div class="pn" hidden></div></article>
+   <article class="card"><h3>El futuro de tus hijos</h3><p>Planea desde hoy el costo de su educación universitaria.</p><button type="button" class="link tog" data-k="phij" data-msg="Hola Yolanda, quiero planear la universidad de mis hijos." aria-expanded="false">CONOCER MÁS</button><div class="pn" hidden></div></article>
   </div>
  </div>
 </section>
@@ -277,7 +278,7 @@ dialog button{margin-top:10px}
    <p class="out" id="yo" aria-live="polite"></p>
   </div>
   <p class="lead footnote">Gráfica ilustrativa con un supuesto de inflación de 4% anual. No representa costos reales de ninguna institución.</p>
-  <p style="margin-top:28px"><a class="btn b-navy" data-wa data-msg="Hola Yolanda, quiero calcular mi meta educativa." target="_blank" rel="noopener">CALCULAR MI META EDUCATIVA</a></p>
+  <p style="margin-top:28px"><a class="btn b-navy" href="#contacto" data-plan="Educación">QUIERO UNA META EDUCATIVA PERSONALIZADA</a></p>
  </div>
 </section>
 
@@ -290,7 +291,7 @@ dialog button{margin-top:10px}
    <article class="card goal"><h3>Retiro</h3></article>
   </div>
   <p class="quote">“Una meta sin estrategia es solamente un deseo.”</p>
-  <p style="margin-top:32px;text-align:center"><a class="btn b-gold" data-wa data-msg="Hola Yolanda, quiero crear mi plan de ahorro." target="_blank" rel="noopener">QUIERO CREAR MI PLAN</a></p>
+  <p style="margin-top:32px;text-align:center"><a class="btn b-gold" href="#contacto" data-plan="Ahorro">QUIERO CREAR MI PLAN</a></p>
  </div>
 </section>
 
@@ -335,7 +336,7 @@ dialog button{margin-top:10px}
  <div class="wrap">
   <h2>Tu futuro financiero<br>comienza con una decisión.</h2>
   <p>Agenda una asesoría y descubre qué estrategia puede ayudarte a proteger, ahorrar y construir patrimonio.</p>
-  <div class="cta-row"><a class="btn b-gold" data-wa target="_blank" rel="noopener">AGENDA TU ASESORÍA GRATUITA</a><a class="btn b-light" data-wa target="_blank" rel="noopener">WHATSAPP</a></div>
+  <div class="cta-row"><a class="btn b-gold" href="#contacto">AGENDA TU CITA</a><a class="btn b-light" data-wa target="_blank" rel="noopener">WHATSAPP</a></div>
  </div>
 </section>
 
@@ -343,11 +344,32 @@ dialog button{margin-top:10px}
  <div class="wrap">
   <h2>Cuéntame qué quieres lograr</h2>
   <p class="lead">Completa el formulario: se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+  <div class="grid g3" style="margin-top:8px">
+   <article class="card" style="align-items:center;text-align:center">
+    <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" style="fill:#25D366"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.3.6 4.4 1.8 6.3L3 29l7.4-1.9a12.8 12.8 0 0 0 5.6 1.3c7 0 12.7-5.6 12.7-12.5S23 3 16 3z"/></svg>
+    <h3 style="font-size:1rem">WhatsApp</h3>
+    <p>Escríbeme directo, con tu interés ya incluido en el mensaje.</p>
+    <a class="btn b-gold" data-wa target="_blank" rel="noopener">ESCRIBIR POR WHATSAPP</a>
+   </article>
+   <article class="card" style="align-items:center;text-align:center">
+    <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" style="fill:var(--navy)"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    <h3 style="font-size:1rem">Llamada directa</h3>
+    <p>Si prefieres platicarlo por teléfono.</p>
+    <a class="btn b-line" href="tel:+525554316074">LLAMAR AHORA</a>
+   </article>
+   <article class="card" style="align-items:center;text-align:center">
+    <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" style="fill:var(--gold-d)"><path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4Z"/></svg>
+    <h3 style="font-size:1rem">Orientación y Asesoría vía Zoom</h3>
+    <p>Elige un horario y recibe el enlace de la videollamada.</p>
+    <a class="btn b-gold" data-wa data-msg="Hola Yolanda, me gustaría agendar una orientación por Zoom." target="_blank" rel="noopener">AGENDAR POR ZOOM</a>
+    <p class="todo">Próximamente: agenda en línea con enlace automático de Zoom. Por ahora, este botón te conecta conmigo por WhatsApp.</p>
+   </article>
+  </div>
   <form class="form" id="form" novalidate>
    <div class="field"><label for="f-n">Nombre</label><input id="f-n" autocomplete="name" required></div>
    <div class="field"><label for="f-w">WhatsApp</label><input id="f-w" type="tel" inputmode="tel" autocomplete="tel" required></div>
    <div class="field"><label for="f-c">Correo</label><input id="f-c" type="email" autocomplete="email"></div>
-   <div class="field"><label for="f-i">¿Qué te interesa?</label><select id="f-i"><option>Seguro</option><option>PPR</option><option>Ahorro</option><option>Educación</option><option>Protección patrimonial</option><option>Otro</option></select></div>
+   <div class="field"><label for="f-i">¿Qué te interesa?</label><select id="f-i"><option>Seguro</option><option>PPR</option><option>Ahorro</option><option>Educación</option><option>Protección patrimonial</option><option>Vida Mujer</option><option>Otro</option></select></div>
    <div class="field"><label for="f-o">¿Qué objetivo quieres alcanzar?</label><textarea id="f-o" rows="3"></textarea></div>
    <button class="btn b-gold" type="submit" style="width:100%">QUIERO RECIBIR ASESORÍA</button>
    <p id="ok" role="status">Gracias por tu información. Yolanda se pondrá en contacto contigo.</p>
@@ -422,12 +444,23 @@ ppr:['El Plan Personal de Retiro es un instrumento de ahorro a largo plazo desti
 aho:['Un plan de ahorro asigna tu dinero a metas concretas, como una casa, un fondo de emergencia o un proyecto, con plazo y monto definidos.','Ordenamos tus metas por prioridad, fijamos plazos y definimos una aportación periódica realista.','Calculamos cuánto tiempo tomaría alcanzar cada meta con distintos montos de ahorro, usando supuestos ilustrativos.'],
 edu:['Un plan educativo reserva recursos desde hoy para costear la universidad de tus hijos cuando llegue el momento.','Consideramos la edad de tus hijos, los años que faltan y el tipo de institución que imaginas, para repartir el esfuerzo en más años.','Estimamos, con un supuesto de inflación, cómo podría crecer el costo y cuánto ahorrar cada mes. Es una referencia, no el costo real de ninguna institución.'],
 pat:['La protección patrimonial reúne estrategias para cuidar lo que ya construiste: tu casa, tus ahorros, tu negocio y lo que quieres dejar a tu familia.','Identificamos qué bienes tienes, qué riesgos los amenazan y qué herramientas, como seguros y ahorro, pueden ayudarte a protegerlos.','Comparamos escenarios con y sin protección para que veas el impacto económico de un imprevisto.'],
-muj:['Vida Mujer reúne opciones de protección y planeación pensadas para las necesidades y etapas de vida de la mujer.','Revisamos tu momento actual, como independencia, maternidad, salud o retiro, y priorizamos qué protección y ahorro necesitas primero.','Estimamos cómo se vería tu plan a distintos plazos, con cifras ilustrativas.']};
+muj:['Vida Mujer reúne opciones de protección y planeación pensadas para las necesidades y etapas de vida de la mujer.','Revisamos tu momento actual, como independencia, maternidad, salud o retiro, y priorizamos qué protección y ahorro necesitas primero.','Estimamos cómo se vería tu plan a distintos plazos, con cifras ilustrativas.'],
+pfam:['Proteger a tu familia significa asegurar que, ante un imprevisto, cuenten con los recursos para mantener su nivel de vida y continuar con sus planes.','Revisamos quiénes dependen económicamente de ti, qué gastos y deudas existen hoy, y qué coberturas ya tienes, para identificar los riesgos que conviene atender primero.','Proponemos una combinación de seguros y ahorro acorde con tu presupuesto, con cifras ilustrativas que te permiten dimensionar el respaldo real que tendría tu familia.'],
+psal:['Un respaldo para gastos médicos ayuda a que una enfermedad o accidente no comprometa tu patrimonio ni el de tu familia.','Analizamos tu edad, tu historial y el respaldo con el que ya cuentas, por ejemplo del IMSS o ISSSTE, para identificar qué tipo de cobertura complementaria tiene sentido para ti.','Comparamos opciones de gastos médicos mayores y seguros con componente de salud, con sumas aseguradas y primas ilustrativas, para que decidas con información clara.'],
+pret:['Mantener tu calidad de vida al retirarte depende de las decisiones que tomes hoy, no de las que puedas tomar cuando llegue el momento.','Calculamos, a partir de tu edad actual y tu edad deseada de retiro, qué ingreso podrías necesitar y qué tan cerca estás de alcanzarlo con tu ahorro actual.','Diseñamos una estrategia de aportaciones con cifras ilustrativas, considerando los beneficios fiscales que, de acuerdo con la legislación vigente, pudieran aplicar a tu caso.'],
+phij:['La educación universitaria de tus hijos representa, en la mayoría de los casos, uno de los compromisos financieros más importantes de una familia.','Consideramos la edad de tus hijos, los años que faltan y el tipo de institución que imaginas para ellos, para repartir el esfuerzo de ahorro en el mayor número de años posible.','Proyectamos, con un supuesto de inflación, cuánto podría costar esa etapa y cuánto convendría destinar cada mes: una referencia, no el costo real de ninguna institución.']};
 var L=['Descripción','Planeación','Proyección'];
+var PLAN={seg:'Seguro',ppr:'PPR',aho:'Ahorro',edu:'Educación',pat:'Protección patrimonial',muj:'Vida Mujer',pfam:'Protección patrimonial',psal:'Seguro',pret:'PPR',phij:'Educación'};
 document.querySelectorAll('.tog').forEach(function(b){var pn=b.nextElementSibling,k=D[b.dataset.k];
  pn.innerHTML=k.map(function(t,i){return '<h4>'+L[i]+'</h4><p>'+t+'</p>'}).join('')+'<p class="disc">Información orientativa. Condiciones, coberturas y beneficios dependen del producto contratado, la legislación vigente y tu situación.</p>';
- var a=document.createElement('a');a.className='btn b-gold';a.target='_blank';a.rel='noopener';a.href=wa(b.dataset.msg);a.textContent='Agenda tu asesoría';pn.appendChild(a);
+ var a=document.createElement('a');a.className='link';a.href='#contacto';a.dataset.plan=PLAN[b.dataset.k]||'';a.textContent='Hablar con Yolanda sobre esto';pn.appendChild(a);
  b.onclick=function(){var o=pn.hidden;pn.hidden=!o;b.setAttribute('aria-expanded',o)}});
+document.addEventListener('click',function(e){
+ var el=e.target.closest('[data-plan]');
+ if(!el)return;
+ var sel=document.getElementById('f-i');
+ if(sel)sel.value=el.dataset.plan;
+});
 document.getElementById('form').onsubmit=function(e){e.preventDefault();
  var g=function(k){return document.getElementById('f-'+k).value.trim()};
  if(!g('n')||!g('w')){alert('Escribe tu nombre y tu WhatsApp.');return}
