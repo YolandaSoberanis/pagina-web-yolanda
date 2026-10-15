@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>Pagina no encontrada | Yolanda Soberanis</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://soberanispatrimonial.com/">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<meta name="theme-color" content="#0E1F3D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1F3D;--navy2:#17305A;--gold:#B8975A;--gold-d:#8A6C34;--bg:#F3EEE4;--ink:#1B2433;--mute:#5A6577}
+*{box-sizing:border-box;margin:0}
+body{font:400 18px/1.65 Roboto,system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--bg),#fff);min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+.wrap{max-width:520px}
+.code{font:400 clamp(3.5rem,14vw,6rem) Roboto,Arial,sans-serif;color:var(--gold);line-height:1}
+h1{font:700 clamp(1.4rem,4vw,2rem) Roboto,Arial,sans-serif;color:var(--navy);margin:14px 0 10px}
+p{color:var(--mute);margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;border-radius:999px;font:600 .95rem Roboto,sans-serif;letter-spacing:.04em;text-decoration:none;margin:6px;background:var(--gold);color:var(--navy);border:1.5px solid transparent}
+.btn:hover{background:#C9A96C}
+.btn.line{background:transparent;border-color:var(--navy);color:var(--navy)}
+.btn.line:hover{background:var(--navy);color:#fff}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <div class="code">404</div>
+ <h1>No encontramos esta pagina</h1>
+ <p>El enlace que buscas no existe o cambio de direccion. Puedes volver al inicio o escribirle directamente a Yolanda por WhatsApp.</p>
+ <a class="btn" href="/">VOLVER AL INICIO</a>
+ <a class="btn line" id="wa-link" target="_blank" rel="noopener">HABLAR POR WHATSAPP</a>
+</div>
+<script>
+document.getElementById('wa-link').href='https://wa.me/525554316074?text='+encodeURIComponent('Hola Yolanda, llegue a un enlace roto de tu pagina y quiero informacion.');
+</script>
+</body>
+</html>
