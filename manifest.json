@@ -1,0 +1,25 @@
+{
+  "name": "Yolanda Soberanis · Asesora Patrimonial",
+  "short_name": "Yolanda Soberanis",
+  "description": "Asesoría personalizada en seguros, PPR, ahorro para el retiro y educación universitaria.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0E1F3D",
+  "theme_color": "#0E1F3D",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
