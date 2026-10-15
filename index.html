@@ -480,10 +480,17 @@ document.addEventListener('click',function(e){
  if(sel)sel.value=el.dataset.plan;
  if(el.dataset.msg){window.open(wa(el.dataset.msg),'_blank','noopener')}
 });
+var FORM_BACKUP_ENDPOINT=''; // Pega aquí tu endpoint de Formspree (ej. https://formspree.io/f/XXXXXXX) para activar el respaldo por correo
 document.getElementById('form').onsubmit=function(e){e.preventDefault();
  var g=function(k){return document.getElementById('f-'+k).value.trim()};
  if(!g('n')||!g('w')){alert('Escribe tu nombre y tu WhatsApp.');return}
+ var digits=g('w').replace(/\D/g,'');
+ if(digits.length<10||digits.length>13){alert('Revisa tu número de WhatsApp: debe tener al menos 10 dígitos.');return}
  var t='Hola Yolanda, soy '+g('n')+'. Me interesa: '+g('i')+'.\nObjetivo: '+(g('o')||'por definir')+'\nWhatsApp: '+g('w')+(g('c')?'\nCorreo: '+g('c'):'');
+ if(typeof gtag==='function'){gtag('event','generate_lead',{interes:g('i'),tiene_correo:!!g('c')})}
+ if(FORM_BACKUP_ENDPOINT){
+  fetch(FORM_BACKUP_ENDPOINT,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify({nombre:g('n'),whatsapp:g('w'),correo:g('c'),interes:g('i'),objetivo:g('o')})}).catch(function(){});
+ }
  window.open(wa(t),'_blank','noopener');document.getElementById('ok').style.display='block'};
 })();
 </script>
