@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com; connect-src https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com; connect-src https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://formspree.io; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>Asesora Patrimonial | Seguros, PPR y ahorro | Yolanda Soberanis</title>
 <meta name="description" content="Yolanda Soberanis, asesora patrimonial. Asesoría personalizada en seguros, PPR, ahorro para el retiro y educación universitaria. Agenda por WhatsApp.">
 <link rel="canonical" href="https://soberanispatrimonial.com/">
@@ -480,7 +480,7 @@ document.addEventListener('click',function(e){
  if(sel)sel.value=el.dataset.plan;
  if(el.dataset.msg){window.open(wa(el.dataset.msg),'_blank','noopener')}
 });
-var FORM_BACKUP_ENDPOINT=''; // Pega aquí tu endpoint de Formspree (ej. https://formspree.io/f/XXXXXXX) para activar el respaldo por correo
+var FORM_BACKUP_ENDPOINT='https://formspree.io/f/xkjokowl';
 document.getElementById('form').onsubmit=function(e){e.preventDefault();
  var g=function(k){return document.getElementById('f-'+k).value.trim()};
  if(!g('n')||!g('w')){alert('Escribe tu nombre y tu WhatsApp.');return}
