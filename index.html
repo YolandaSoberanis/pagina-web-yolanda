@@ -30,7 +30,7 @@ gtag('config', 'G-XKT5Y0CYB2');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FinancialService","name":"Yolanda Soberanis Abarca, Asesora Patrimonial","url":"https://soberanispatrimonial.com/","telephone":"+525554316074","email":"soberanispatrimonial@gmail.com","areaServed":"Querétaro, México","address":{"@type":"PostalAddress","addressLocality":"Querétaro","addressRegion":"Querétaro","addressCountry":"MX"},"sameAs":["https://www.instagram.com/yolisoberanisa"],"description":"Asesoría patrimonial personalizada en seguros, PPR, ahorro y educación."}
+{"@context":"https://schema.org","@type":"FinancialService","name":"Yolanda Soberanis Abarca, Asesora Patrimonial","url":"https://soberanispatrimonial.com/","telephone":"+525554316074","email":"soberanispatrimonial@gmail.com","areaServed":"Querétaro, México","address":{"@type":"PostalAddress","addressLocality":"Querétaro","addressRegion":"Querétaro","addressCountry":"MX"},"sameAs":["https://www.instagram.com/yolisoberanisa","https://facebook.com/yolanda.soberanis.56"],"description":"Asesoría patrimonial personalizada en seguros, PPR, ahorro y educación."}
 </script>
 <style>
 :root{--navy:#0E1F3D;--navy2:#17305A;--gold:#B8975A;--gold-d:#8A6C34;--bg:#F3EEE4;--ink:#1B2433;--mute:#5A6577;--line:#E3E6EC;--r:18px}
@@ -86,7 +86,7 @@ nav.open{display:block}nav ul{flex-direction:column;gap:0}nav a{display:block;pa
 .card:hover{box-shadow:0 18px 40px -22px #0E1F3D66;transform:translateY(-3px)}
 .card p{color:var(--mute);flex:1;font-size:.98rem}
 .card .link{align-self:flex-start;font-size:.88rem;letter-spacing:.05em}
-.card .link.tog{background:none;border:0;border-bottom:1.5px solid var(--gold);cursor:pointer;font:inherit;padding:0;text-align:left}
+.card .link.tog{background:none;border:0;border-bottom:1.5px solid var(--gold);cursor:pointer;font:inherit;font-size:.78rem;padding:0;text-align:left}
 .services .card{background:var(--bg);border-color:transparent;border-top-color:var(--gold)}
 .services .wide{grid-column:1/-1}
 /* ppr */
@@ -148,6 +148,9 @@ footer a{color:#fff;text-decoration:none;border-bottom:1px solid #ffffff44}
 .wa:hover{transform:scale(1.08)}.wa svg{width:32px;height:32px;fill:#fff}
 .call{position:fixed;right:18px;bottom:90px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--navy);display:grid;place-items:center;box-shadow:0 10px 26px -8px #0006;transition:transform .2s}
 .call:hover{transform:scale(1.08)}.call svg{width:26px;height:26px;fill:#fff}
+.totop{position:fixed;right:18px;bottom:162px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--navy);display:grid;place-items:center;box-shadow:0 10px 26px -8px #0006;transition:transform .2s,opacity .2s,visibility .2s;opacity:0;visibility:hidden}
+.totop.show{opacity:1;visibility:visible}
+.totop:hover{transform:scale(1.08)}.totop svg{width:24px;height:24px;fill:#fff}
 dialog{border:0;border-radius:var(--r);max-width:560px;width:calc(100% - 32px);padding:30px;max-height:85vh;overflow:auto}
 dialog::backdrop{background:#0E1F3D99}
 dialog h2{font-size:1.8rem;margin-bottom:14px}dialog p{margin-bottom:12px;font-size:.95rem}
@@ -159,7 +162,10 @@ dialog button{margin-top:10px}
 .pn h4{font:400 1.1rem Roboto,Arial,sans-serif;color:var(--navy);margin:14px 0 2px}
 .pn p{flex:none;font-size:.93rem;color:var(--mute)}.pn .disc{font-size:.78rem;margin:14px 0}
 .pn .btn{min-height:46px;padding:10px 22px;font-size:.85rem;width:100%}
-.services .grid{align-items:stretch}
+.services .grid{align-items:start}
+.services .card{min-height:230px}
+#proteccion .grid{align-items:start}
+#proteccion .card{min-height:235px}
 #proteccion h2{text-align:center}
 @media(min-width:760px){#proteccion h2{white-space:nowrap}}
 #proteccion .lead{text-align:center;margin-left:auto;margin-right:auto}
@@ -278,7 +284,7 @@ dialog button{margin-top:10px}
    <p class="out" id="yo" aria-live="polite"></p>
   </div>
   <p class="lead footnote">Gráfica ilustrativa con un supuesto de inflación de 4% anual. No representa costos reales de ninguna institución.</p>
-  <p style="margin-top:28px"><a class="btn b-navy" href="#contacto" data-plan="Educación">QUIERO UNA META EDUCATIVA PERSONALIZADA</a></p>
+  <p style="margin-top:28px;text-align:center"><a class="btn b-navy" href="#contacto" data-plan="Educación" data-msg="Hola Yolanda, quiero una meta educativa personalizada para mis hijos.">QUIERO UNA META EDUCATIVA PERSONALIZADA</a></p>
  </div>
 </section>
 
@@ -291,7 +297,7 @@ dialog button{margin-top:10px}
    <article class="card goal"><h3>Retiro</h3></article>
   </div>
   <p class="quote">“Una meta sin estrategia es solamente un deseo.”</p>
-  <p style="margin-top:32px;text-align:center"><a class="btn b-gold" href="#contacto" data-plan="Ahorro">QUIERO CREAR MI PLAN</a></p>
+  <p style="margin-top:32px;text-align:center"><a class="btn b-gold" href="#contacto" data-plan="Ahorro" data-msg="Hola Yolanda, quiero crear mi plan de ahorro.">QUIERO CREAR MI PLAN</a></p>
  </div>
 </section>
 
@@ -346,7 +352,7 @@ dialog button{margin-top:10px}
   <p class="lead">Completa el formulario: se abrirá WhatsApp con tu mensaje listo para enviar.</p>
   <div class="grid g3" style="margin-top:8px">
    <article class="card" style="align-items:center;text-align:center">
-    <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" style="fill:#25D366"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.3.6 4.4 1.8 6.3L3 29l7.4-1.9a12.8 12.8 0 0 0 5.6 1.3c7 0 12.7-5.6 12.7-12.5S23 3 16 3z"/></svg>
+    <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" style="fill:var(--navy)"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.3.6 4.4 1.8 6.300L3 29l7.400-1.900a12.800 12.800 0 0 0 5.600 1.300c7 0 12.700-5.600 12.700-12.500S23 3 16 3zm0 23.100c-1.800 0-3.600-.5-5.100-1.400l-.4-.2-4.400 1.100 1.200-4.200-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.400 9.800 10.100 5.300 16 5.300s10.600 4.500 10.600 10.100S21.900 26.100 16 26.100zm5.800-7.600c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.700 8.700 0 0 1-4.300-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400s-1.200 1.200-1.200 2.800 1.200 3.300 1.400 3.500 2.400 3.700 5.900 5.100c2.200.9 3 1 4.100.8.700-.1 1.900-.8 2.200-1.600s.3-1.400.2-1.600-.3-.2-.7-.4z"/></svg>
     <h3 style="font-size:1rem">WhatsApp</h3>
     <p>Escríbeme directo, con tu interés ya incluido en el mensaje.</p>
     <a class="btn b-gold" data-wa target="_blank" rel="noopener">ESCRIBIR POR WHATSAPP</a>
@@ -385,7 +391,7 @@ dialog button{margin-top:10px}
    <li><a class="wa-footer-ico" data-wa target="_blank" rel="noopener" href="#" aria-label="WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.3.6 4.4 1.8 6.300L3 29l7.400-1.900a12.800 12.800 0 0 0 5.600 1.300c7 0 12.700-5.600 12.700-12.500S23 3 16 3zm0 23.100c-1.800 0-3.600-.5-5.100-1.400l-.4-.2-4.400 1.100 1.200-4.200-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.400 9.800 10.100 5.300 16 5.300s10.600 4.500 10.600 10.100S21.900 26.100 16 26.100zm5.800-7.600c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.700 8.700 0 0 1-4.300-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400s-1.200 1.200-1.200 2.800 1.200 3.300 1.400 3.500 2.400 3.700 5.900 5.100c2.200.9 3 1 4.100.8.700-.1 1.900-.8 2.200-1.600s.3-1.400.2-1.600-.3-.2-.7-.4z"/></svg></a></li>
    <li><a href="mailto:soberanispatrimonial@gmail.com">soberanispatrimonial@gmail.com</a></li>
    <li><a href="https://www.instagram.com/yolisoberanisa" target="_blank" rel="noopener">Instagram</a></li>
-   <li><a href="https://www.facebook.com/search/top?q=Yolanda%20Soberanis" target="_blank" rel="noopener">Facebook</a></li>
+   <li><a href="https://facebook.com/yolanda.soberanis.56" target="_blank" rel="noopener">Facebook</a></li>
   </ul>
   <ul>
    <li><a href="#" data-dlg="priv">Aviso de privacidad</a></li>
@@ -397,6 +403,7 @@ dialog button{margin-top:10px}
 
 <a class="wa" data-wa target="_blank" rel="noopener" aria-label="Escribir a Yolanda por WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.3.6 4.4 1.8 6.300L3 29l7.400-1.900a12.800 12.800 0 0 0 5.600 1.300c7 0 12.700-5.600 12.700-12.500S23 3 16 3zm0 23.100c-1.800 0-3.600-.5-5.100-1.400l-.4-.2-4.400 1.100 1.200-4.200-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.400 9.800 10.100 5.300 16 5.300s10.600 4.500 10.600 10.100S21.900 26.100 16 26.100zm5.800-7.600c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.700 8.700 0 0 1-4.300-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400s-1.200 1.200-1.200 2.800 1.200 3.300 1.400 3.500 2.400 3.700 5.900 5.100c2.200.9 3 1 4.100.8.700-.1 1.900-.8 2.200-1.600s.3-1.400.2-1.600-.3-.2-.7-.4z"/></svg></a>
 <a class="call" href="tel:+525554316074" aria-label="Llamar directamente a Yolanda Soberanis"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
+<a class="totop" href="#inicio" aria-label="Volver al inicio" id="totop"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg></a>
 
 <dialog id="priv" aria-labelledby="pt"><h2 id="pt">Aviso de privacidad</h2>
 <p><b>Responsable:</b> Yolanda Soberanis Abarca, con domicilio profesional en Querétaro, Querétaro.</p>
@@ -417,6 +424,8 @@ function wa(t){return 'https://wa.me/'+NUM+'?text='+encodeURIComponent(t||DEF)}
 document.querySelectorAll('[data-wa]').forEach(function(a){a.href=wa(a.dataset.msg)});
 var nav=document.getElementById('nav'),mb=document.getElementById('mb');
 mb.onclick=function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'✕':'☰'};
+var totop=document.getElementById('totop');
+window.addEventListener('scroll',function(){totop.classList.toggle('show',window.scrollY>400)},{passive:true});
 nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');mb.textContent='☰';mb.setAttribute('aria-expanded','false')}});
 document.querySelectorAll('[data-dlg]').forEach(function(a){a.onclick=function(e){e.preventDefault();document.getElementById(a.dataset.dlg).showModal()}});
 document.querySelectorAll('[data-close]').forEach(function(b){b.onclick=function(){b.closest('dialog').close()}});
@@ -453,13 +462,14 @@ var L=['Descripción','Planeación','Proyección'];
 var PLAN={seg:'Seguro',ppr:'PPR',aho:'Ahorro',edu:'Educación',pat:'Protección patrimonial',muj:'Vida Mujer',pfam:'Protección patrimonial',psal:'Seguro',pret:'PPR',phij:'Educación'};
 document.querySelectorAll('.tog').forEach(function(b){var pn=b.nextElementSibling,k=D[b.dataset.k];
  pn.innerHTML=k.map(function(t,i){return '<h4>'+L[i]+'</h4><p>'+t+'</p>'}).join('')+'<p class="disc">Información orientativa. Condiciones, coberturas y beneficios dependen del producto contratado, la legislación vigente y tu situación.</p>';
- var a=document.createElement('a');a.className='link';a.href='#contacto';a.dataset.plan=PLAN[b.dataset.k]||'';a.textContent='Hablar con Yolanda sobre esto';pn.appendChild(a);
+ var a=document.createElement('a');a.className='link';a.href='#contacto';a.dataset.plan=PLAN[b.dataset.k]||'';a.dataset.msg=b.dataset.msg;a.textContent='Hablar con Yolanda sobre esto';pn.appendChild(a);
  b.onclick=function(){var o=pn.hidden;pn.hidden=!o;b.setAttribute('aria-expanded',o)}});
 document.addEventListener('click',function(e){
  var el=e.target.closest('[data-plan]');
  if(!el)return;
  var sel=document.getElementById('f-i');
  if(sel)sel.value=el.dataset.plan;
+ if(el.dataset.msg){window.open(wa(el.dataset.msg),'_blank','noopener')}
 });
 document.getElementById('form').onsubmit=function(e){e.preventDefault();
  var g=function(k){return document.getElementById('f-'+k).value.trim()};
